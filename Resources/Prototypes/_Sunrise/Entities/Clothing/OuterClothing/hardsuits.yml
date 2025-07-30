@@ -211,6 +211,7 @@
   - type: Tag
     tags:
     - Hardsuit
+    - FullBodyOuter  # SUNRISE EDIT
     - WhitelistChameleon
 
 - type: entity
@@ -478,3 +479,5 @@
           Heat: 0.4
           Radiation: 0.5
           Caustic: 0.5
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHelmetEVA
