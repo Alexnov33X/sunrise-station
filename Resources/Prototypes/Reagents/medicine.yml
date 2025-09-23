@@ -1375,18 +1375,20 @@
   - !type:PlantCryoxadone {}
   metabolisms:
     Medicine:
+      metabolismRate: 1.0 # Metabolizes twice as fast as normal, but also double healing. Faster for cryo
       effects:
+        #Sunrise-Start
         - !type:HealthChange
-          conditions:
-          - !type:Temperature
-            max: 213.0
           damage:
-            groups:
-              Brute: -4
-              Burn: -5
             types:
-              Poison: -2
               Mangleness: -0.5 #Sunrise-Edit
+        #Sunrise-End
+        - !type:EvenHealthChange
+          damage:
+            Burn: -4 #Sunrise-Edit
+            Toxin: -4 #Sunrise-Edit
+            Airloss: -4 #Sunrise-Edit
+            Brute: -4 #Sunrise-Edit
 
 - type: reagent
   id : Aloxadone
