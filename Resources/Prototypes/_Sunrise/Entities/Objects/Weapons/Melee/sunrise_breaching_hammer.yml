@@ -1,0 +1,41 @@
+- type: entity
+  name: sunrise breaching hammer
+  parent: BaseItem
+  id: SunriseBreachingHammer
+  description: A special breaching hammer utilized by Sunrise units.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Melee/sunrise_breaching_hammer.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+  - type: MeleeWeapon
+    attackRate: 0.7
+    range: 1.70
+    damage:
+      types:
+        Blunt: 5
+        Structural: 25
+    soundHit:
+      collection: MetalThud
+    bluntStaminaDamageFactor: 1.5
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 20
+        Structural: 110
+  - type: Tool
+    qualities:
+      - Prying
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: Prying
+    speedModifier: 1
+    pryPowered: true
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Melee/sunrise_breaching_hammer.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
